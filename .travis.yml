@@ -1,3 +1,10 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
+deploy:
+  provider: heroku
+  api_key:
+    secure: FsC85jj2xBVc1Z948w7AnffLRbQG53NzOIdimxrJ/anv4pTMtCHlKWJ+Xs9WgJJk6PnaNLVjmPxkTuioZvGcYOAcFuOD5M1qL3nX0vI/Id+v88i+w1cefvKlg5GGOike/tu5qLrL7RTyj9WcwWNKngE2LNuW1sua0VTCEIBfRt9vGSQu0ngwG9TZXj9WC2OEGZnXjaqpl7NfF4pI7PiBQLwuL5J7orFYnJNaeT2iPBFrCQHQmqV6UXj2xZ6vSyzANi5HcXLKKcgIRqZVFqMizIa/IYLeG4qYouvIcwhkaWcrrEmcwPctkW8JiRb3jTfDzevu1uaGwxXOOqNgAfmD0rtshHNXH0m7HITdE6AbTSb7SM5m4tikdl3MG5/mOLRLzmyURv2tj7Dh9u6DHrJQUJQroK9Y+GEOZHGcI43Ybpu5l4NFl8xiE1cR0gBM9wS+uQgORVAsdbCxFmXdgfa+fpUtgg6eW+nRqV3WOTO1T+qah9QnJrp/CFFSZ2EhGHTcnke6GgzO9Jk5DHBRBVEzTj4fUNpnOGaUjX4pKjg9eatW4eHcpuWM/Hh3bEC850A9Y780keSR+vgfn/WoeUjj/M3SRjlkdZWW+QcUf/IrlLGAUI3FWaVm5C8WVm0loegBZpz7yiwsvsXTO/6pOYmuACrCf3ncrwFNA4M4k3rjaXA=
+  app: noteit
+  on:
+    repo: carlosmiguelcastro/noteit
