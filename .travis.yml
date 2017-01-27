@@ -8,3 +8,5 @@ deploy:
   app: castronoteit
   on:
     repo: carlosmiguelcastro/noteit
+notifications:
+  email: false
