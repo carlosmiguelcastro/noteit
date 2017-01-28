@@ -16,4 +16,18 @@ public class PostService {
     public Iterable<Post> getAllPost(){
         return postRepository.findAll();
     }
+
+    public void addPost(String content){
+        postRepository.save(new Post(content));
+    }
+
+    public void delPost(Integer id){
+        postRepository.delete(id);
+    }
+
+    public void changePost(Integer id, String content){
+        Post post = postRepository.findOne(id);
+        post.setContent(content);
+        postRepository.save(post);
+    }
 }

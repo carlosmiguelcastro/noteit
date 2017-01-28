@@ -11,12 +11,12 @@ public class Post {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
-    private String text;
+    private String content;
 
-    protected Post(){}
+    public Post(){}
 
-    public Post(String text) {
-        this.text = text;
+    public Post(String content) {
+        this.content = content;
     }
 
     public Integer getId() {
@@ -28,12 +28,12 @@ public class Post {
         return this;
     }
 
-    public String getText() {
-        return text;
+    public String getContent() {
+        return content;
     }
 
-    public Post setText(String text) {
-        this.text = text;
+    public Post setContent(String content) {
+        this.content = content;
         return this;
     }
 
@@ -41,7 +41,7 @@ public class Post {
     public String toString() {
         return "Post{" +
                 "id=" + id +
-                ", text='" + text + '\'' +
+                ", content='" + content + '\'' +
                 '}';
     }
 }

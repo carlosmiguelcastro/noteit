@@ -5,7 +5,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p th:each="post : ${allposts}"
-   th:text="${post.text}">A Smoke Test</p>
+<th:block th:each="post : ${allposts}">
+    <p th:text="${post.content}"></p>
+    <a th:href="@{'/post/' + ${post.id}}">Delete</a>
+</th:block>
+    <form action="#" th:action="@{/}" th:object="${post}" method="post">
+        <p>Message: <input type="text" th:field="*{content}" /></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
 </body>
 </html>
