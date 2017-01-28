@@ -17,8 +17,8 @@ public class PostService {
         return postRepository.findAll();
     }
 
-    public void addPost(String content){
-        postRepository.save(new Post(content));
+    public void addPost(String title, String content){
+        postRepository.save(new Post(title, content));
     }
 
     public void delPost(Integer id){

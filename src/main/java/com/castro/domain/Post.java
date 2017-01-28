@@ -11,11 +11,13 @@ public class Post {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
+    private String title;
     private String content;
 
     public Post(){}
 
-    public Post(String content) {
+    public Post(String title, String content) {
+        this.title = title;
         this.content = content;
     }
 
@@ -28,6 +30,15 @@ public class Post {
         return this;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public Post setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+
     public String getContent() {
         return content;
     }
@@ -35,13 +46,5 @@ public class Post {
     public Post setContent(String content) {
         this.content = content;
         return this;
-    }
-
-    @Override
-    public String toString() {
-        return "Post{" +
-                "id=" + id +
-                ", content='" + content + '\'' +
-                '}';
     }
 }

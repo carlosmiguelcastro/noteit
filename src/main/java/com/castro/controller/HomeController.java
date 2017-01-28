@@ -25,7 +25,7 @@ public class HomeController {
 
     @PostMapping("/")
     public String addPost(@ModelAttribute Post post) {
-        postService.addPost(post.getContent());
+        postService.addPost(post.getTitle(), post.getContent());
         return "redirect:/";
     }
 
