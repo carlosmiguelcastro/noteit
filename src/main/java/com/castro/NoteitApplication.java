@@ -17,9 +17,9 @@ public class NoteitApplication {
 	@Bean
 	public CommandLineRunner loadData(PostRepository repository) {
 		return (args) -> {
-			repository.save(new Post("first post"));
-			repository.save(new Post("second post"));
-			repository.save(new Post("third post"));
+			repository.save(new Post("first title", "first post"));
+			repository.save(new Post("second title", "second post"));
+			repository.save(new Post("third title", "third post"));
 		};
 	}
 }
